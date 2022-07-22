@@ -72,27 +72,6 @@ def referee(word1: str, word2: str):
     
     return "".join(results)
 
-
-
-'''
-def choose_word(game):
-
-    with open("wordle-possible-answers.txt", "r") as f:
-        w = [y for x in csv.reader(f) for y in x]
-        scores = {}
-        for ans in w:
-            values = {}.fromkeys(list(range(5)), [0, 0, 0])
-            for word in game.words:
-                for num, x in enumerate(referee(ans, word)):
-                    values[num][int(x)] += 1
-            score = 0
-            for v in values:
-                score += sum([values[v][n]**2 for n in range(3)])/sum(values[v])
-            scores[ans] = score
-        return min(scores, key=lambda x:scores[x])
-'''
-
-
 def choose_word(game):
 
     with open("wordle-possible-answers.txt", "r") as f:
@@ -108,15 +87,6 @@ def choose_word(game):
                     results[result] = 1
             scores[ans] = sum([x**2 for x in results.values()])/len(results)
         return min(scores, key=lambda x:scores[x]-(1 if x in game.words else 0)) 
-
-
-        
-
-
-
-
-    
-
 
 
 
