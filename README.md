@@ -5,4 +5,5 @@ This program is intended to solve any given wordle answer in the least amount of
 To use this program, simply type in the guess given by the program into wordle; next, type in the results of this guess (0 for grey, 1 for yellow, 2 for green) into the "results:" prompt. For example, if the program starts with "SALET" and wordle says that "S" is green and "A" is yellow, the appropriate syntax for the prompt is "21000". 
 
 Here is the website for wordle: https://www.nytimes.com/games/wordle/index.html
+
 Here is the website of the wordle bot leaderboard: https://freshman.dev/wordle/#/leaderboard; my solver is named "Noutronix".
